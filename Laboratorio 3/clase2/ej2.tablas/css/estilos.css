@@ -1,0 +1,24 @@
+table
+{
+    /*border: 1px solid black;si quiero agregar los estilos puede ir aca o lo correcto seria en css*/
+    border-collapse: collapse;
+    padding: 50px;
+}        
+td /*aca le aplico estilo a las etiquetas que escribo*/
+{
+    border: 1px solid black;/*con esto me ahorro 3 lineas de codigo*/
+    /*border-color: black;
+    border-width: 1px;
+    border-style: dotted;*/
+    text-align: center;
+    padding: 30px;
+}
+th
+{
+    background-color: #444;
+    color: #fff;
+}
+tfoot
+{
+    background-color: brown;
+}

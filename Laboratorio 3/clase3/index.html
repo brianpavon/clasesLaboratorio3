@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        
+        
+        <fieldset><!--agrupa ciertas cosas, es como el groupbox de c#-->
+            <legend>Datos Personales</legend><!--no importa donde este el legend, siempre lo pone arriba-->
+            <label for="">Nombre</label>
+            <input type="text" name="" id=""><!--se recupera el nombre de las variables, el id es unico y se usa como referencia para apuntar a ese elemento-->
+            <label for="">Apellido</label>
+            <input type="text" name="" id="">
+        </fieldset>        
+        <!--hay una familia de inputs,muchas etiquetas-->
+        <input type="range" name="" id=""><!--me da un desplazable,puedo poner un minimo y maximo-->
+        <input type="number" min="0" max="10" name="" id="" value="5"><!--tambien puedo poner un min o max, con el value le doy un valor por defecto para que se inicialize con eso-->   
+        <input type="date" name="" id=""><!--nos aparece un calendario, como se vea depende del navegador-->     
+        <input type="password" name="" id=""><!--esto no tiene nada que ver con validacion, eso se hace en el back-->
+        <br>
+        <input type="email" name="" id="" required>
+        <br>
+        <input type="file" name="" id=""><!--se podria poner que extension tiene que abrir-->
+        <br>
+        <select name="Pais" id=""><!--si aca le pones multiple, cuando lo pasa, pasa un array-->
+            <optgroup label="America"><!--pongo las opciones en un grupo mas grande a su vez-->
+            <!--el value es lo que me va a devolver a mi, entre las etiquetas es lo que muestra-->
+            <option value="ar">Argentina</option>
+            <option value="cl">Chile</option>
+            <option value="br" selected>Brasil</option><!--si quiero que aparezca primero esto, pongo propiedad selected-->
+            </optgroup>
+            <optgroup label="Europa">
+            <option value="es">España</option>
+            <option value="it">Italia</option>
+            <option value="de">Alemania</option>
+            </optgroup>      
+        </select><br>
+        <input type="checkbox" name="" id="" value="c#" checked>C#<br><!--para tildar opciones,con propiedad checked ya aparece seleccionado, lo que esta en value es lo que pasamos-->
+        <input type="checkbox" name="" id="" disabled>Java<br><!--con la propiedad disabled lo deshabilito-->
+        <input type="checkbox" name="" id="">Python<br>
+        <fieldset>
+            <legend>Genero</legend>
+            <input type="radio" name="genre" id="" value="masculino">Masculino <br> <!--para que me deje solo seleccionar un opcion pongo el mismo name a todos-->
+            <input type="radio" name="genre" id="" value="femenino">Femenino <br>
+            <input type="radio" name="genre" id="" value="indeterminado">Prefiero no decirlo <br>
+        </fieldset>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" >
+        <input type="reset" ><!--me reinicia todos los controles del formulario-->
+    </form>
+    <article itemscope itemtype="http://schema.org/Movie" ><!--asi sabe el navegador que estamos hablando de una pelicula-->
+        <h2 itemprop="name">Volver al Futuro</h2>
+        <img src="./images/back2.jpg" alt="" itemprop="image">
+        <p itemprop="director">Director: <span>Robert Zemeckis</span> </p>
+        <p itemprop="dateCreated">Año de estreno: <span>1985-06-07</span> </p>
+
+    </article>
+    <!--etiqueta iframe, guarda todo el contenido completo de una pagina web, meto una pagina web dentro de mi pagina-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13140.680687519687!2d-58.40592325!3d-34.57456045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb59fbd810ab1%3A0x37e7c1b77bb6f6e!2sBosques%20de%20Palermo!5e0!3m2!1ses!2sar!4v1599610721960!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</body>
+</html>

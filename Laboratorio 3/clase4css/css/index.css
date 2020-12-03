@@ -1,0 +1,114 @@
+/*p
+{
+  background-color: rebeccapurple;  
+}*/
+
+*/*el asterisco se usa mucho para limpiar los estilos que viene por defecto*/
+{
+    margin: 0;
+    box-sizing: border-box;/*uso el borde de la caja del elemento,para ver lo que ocupa realmente el elemento en la pagina*/
+    font-family: "Machow";
+}
+/*p,h1/*asi puedo poner varias etiquetas con el mismo estilo
+{
+    background-color: rebeccapurple;
+}*/
+
+p
+{
+    text-transform: capitalize;/*pone la primer letra de cada palabra en mayuscula*/
+    width: 200px;
+    height: 200px;
+    /*padding: 20px;/*si pongo solo padding se aplica a los 4 lados*/
+    /*padding-left: 100px;/*al costado izquierdo*/
+    padding: 10px 30px 50px; /*arriba derecha/izquierda y ultimo abajo, puede ponerlo todo asi de una en vez de uno a uno*/
+    
+    /*border: 2px solid red;/*puedo ponerlo asi o uno a uno*/
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+    /*border-radius: 2px;hace los bordes redondeados por ej*/
+
+    margin: 30px;/*el margen, se puede hacer uno a uno,top right left bottom*/
+    margin-left: -50px;
+    transition: margin-left 5s , background-color 5s;
+    /*mueve el elemento en esos 5 seg, de un cierto margen a otro y tambien el color*/
+}
+
+p::first-letter/*esto es pseudo elemento*/
+{
+    text-transform: capitalize;
+}
+
+p:hover/*pseudo clase*/
+{
+    /*hover es cuando pasamos por encima con el puntero*/
+    background-color: coral;
+    margin-left: 0px;
+}
+
+.green/*este es mas especifico que el selector de etiqueta, tiene mas valor que la etiqueta, si estan las 2 gana esta*/
+{
+    background-color: green;
+}
+
+#miParrafo
+{
+    /*background-color: red;*/
+    text-align: justify;
+}
+
+/*a[href*="google"]/*lo que hago con [] y * es que hace referencia a los "a" que tengan el texto google
+{
+    text-decoration: none;/*le sacamos la decoracion que viene por default
+}*/
+
+/*div a/*esto aplica a todos los a que esten dentro de div, si quiero que aplique solo al hijo se usa >
+{
+    text-decoration: none;
+    color: grey;
+}*/
+
+/*div
+{
+    /*width: 600px;/*ancho de 600 pixeles
+    min-width: 600px;/*si paso estos 600,aparece la barra de desplazamiento porque mas no se va achicar
+    height: 600px;/*alto
+    background-color: indianred;
+    background-image: url(../img/auto.jpg);/*le inserto una imagen de fondo a este div en este ej
+    /*background-repeat: no-repeat;/*para que duplique la imagen si es mas chica que el tamaño del elemento
+    background-position: center;/*la imagen queda en el centro del elemento
+    background-size: cover;/*elimina los espacios vacios, se adecua al elemento
+}*/
+
+div
+{    
+    width: 100vw;/*aca es el 100% del view port, del ancho de la pantalla*/
+    height: 100vh;/*ocupa todo el alto visible*/
+    background-color: indianred;
+}
+li
+{
+    list-style-type: none;
+    background-color: black;
+    display: inline;/*aparecen uno al lado del otro*/
+    padding: 10px 20px;/*le podemos dar tipo un formato boton*/
+    cursor: pointer;/*cuando le pasamos el cursor simula como que el link este en todo el li*/
+    border-radius: 5px;
+    margin-right: 15px;/*separamos cada elemento entre si*/
+}
+li:hover
+{
+    background-color: rgba(0,0,0,0.5);/*cuando le pasamos el cursor se pone de otro color*/
+}
+li a/*a los "a" que esten dentro de un li le vamos a hacer esto*/
+{
+    text-decoration: none;
+    color: white;    
+}
+
+@font-face/*para usar tipografia que descargo, le pongo un nombre y le paso la ubicacion del mismo*/
+{
+    font-family: "Machow";
+    src: url(../font/MachowDemo-6Yjoq.ttf);
+}

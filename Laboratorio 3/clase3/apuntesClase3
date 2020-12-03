@@ -1,0 +1,63 @@
+Antes usabamos muchos js en el html.
+
+Estos 3 son importantes
+Cliente
+
+Browser
+
+Servidor--> son cpus que estan en algun lado
+--------------------------------------------------------
+dns--> de name server
+
+todas las paginas web tienen una parte de cliente y otra de servidor
+
+al servidor le hacemos peticiones con ese index.html,
+
+para desarrollar de manera local, levantamos un servidor local,
+hacemos como que nuestra pc tenga varias caras, se comporta como cliente y como servidor
+
+puedo tener una misma direccion ip, con varios puertos
+
+siempre terminamos aprendiende abm (alta,baja, modificacion)
+tambien esta el C.R.U.D (create(alta),read(select en base de datos),update(modificacion),delete(baja))
+
+get-->cuando no modificamos la base de datos(leer base de datos)
+post-->cuando modificamos la base de datos
+
+primero trabajamos con localstore, y luego vamos usar ajax a traves de un serv local
+se usa servidores locales, para ver como funcionaría mi aplicacion,
+para despues usar en un hosting
+
+placeholder-->completaba alguna frase en la caja de texto
+for, le dabamos el mismo nombre de la caja de texto
+
+input--> si uso require, que se puede usar en cualquier campo,
+es para que ese campo si o si se complete, y si se usa en un mail por ej,
+toma que se cumplan cierta caracteristica, osea que tenga un arroba por ej
+
+mdn--> es la documentacion no oficial, pero esta muy bueno segun baus
+
+radiobutton distinto de checkbox...
+el primero para elegir entre poquitos, y el checkbox para hacer tipo un select
+
+cuando pasa algo, siempre es el value lo que pasa, sino escribi un value,
+devuelve on, como indicando que hay algo seleccionado
+
+opengrah-->importante para el posicionamiento en los motores de busqueda
+nos muestra como la imagen y un pequeño parrafito de lo que esta en la paginas
+opengraph es de facebook, schema es de google
+esta etiqueta, es lo que una pagina quiere mostrar
+
+--------------ARMANDO LA PAGINA DE INMOBILIARIA--------------
+Hacemos barrido, es ir recorriendo la pagina para ver lo que contiene
+Empezamos con el texto... identificando los h1,h2 etc...
+despues le vamos agregando el resto
+Segundo barrido, buscar todos los enlaces
+Tercer Barrido---> Colocar imagenes
+
+el tamaño de letra y demas lo mejor es hacer con css
+Cuarto Barrido--> colocacion de etiquetas semanticas
+cuando cambia la seccion nos damos cuenta por algun h2
+
+
+

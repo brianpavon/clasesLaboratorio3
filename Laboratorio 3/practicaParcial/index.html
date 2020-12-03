@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!--<script src = "./js/script.js" defer type="module"> </script>-->
+    <script src = "./js/script.js" type="module"> </script>   
+    <title>Practica Parcial</title>
+</head>
+<body>
+    <section class="container" id="dataIn">
+        <form>
+            <label>
+                Nombre:<input type="text" id="txtNombre" name="nombre" required>
+            </label>
+            <br><br>
+            <label>
+                Apellido:<input type="text" id="txtApellido" name="apellido" required>
+            </label>
+            <br><br>
+            <label>
+                Email:<input type="email" id="txtEmail" name="email">
+            </label>
+            <br><br>
+            <fieldset>
+                <legend>Genero</legend>
+                <label for="rdoM">
+                    <input 
+                    type="radio" 
+                    name="gender" 
+                    id="rdoM" 
+                    value="Male" 
+                    checked
+                    >Masculino
+                </label>
+                <br><br>
+                <label for="rdoF">
+                    <input 
+                    type="radio" 
+                    name="gender" 
+                    id="rdoF" 
+                    value="Female"
+                    >Femenino
+                </label>
+                <br><br>
+            </fieldset>
+            <button>Alta Persona</button>
+        </form>
+    </section>
+    <!--<button id="btnTabla">Cargar tabla</button>-->
+    <section class="container">
+        <div id="divTabla">
+
+        </div>
+    </section>
+    
+</body>
+</html>

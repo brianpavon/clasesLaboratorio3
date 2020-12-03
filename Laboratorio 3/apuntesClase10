@@ -1,0 +1,46 @@
+AJAX... ASINCRONO JAVA SCRIPT XML
+Se usa AJAX, para crear paginas mas interactivas, puede crear paginas que pueden actualizar
+su contenido sin recargar. AJAX permite que una pagina se comunique directamente con el servidor,
+recupere informacion y se actualice. Todo esto sin que la se vuelva a cargar
+
+servidor debe retornar un JSON o un XML
+
+toda la arquitectura de AJAX, se basa en XML Y HTTP REQUEST
+
+XHR->html http request
+
+el corazon de AJAX es html http request
+el objeto xml http request tiene un evento readystate
+pero solo nos importa cuando readystate sea 4
+
+las API REST  son el nuevo CRUD del desarrollo moderno...
+C->create  
+R->Read
+U->Update
+D->Delete
+
+Muchos solo programan con POST y GET, pero lo correcto es usar todos los verbos
+
+el status de una peticion, puede venir en diferentes codigos
+el mas conocido es el 404
+A nosotros nos importa entre los 200,
+para ser mas capo si podemos hacer algo cuando nos devuelve los diferentes codigos
+
+Para probar podemos usar una api false... de jsonplaceholder
+
+EndPoint-> un punto al que le pegas, la ruta al que le haces la peticion
+
+TERNARIO: primero como si fuera un if, despues de ? el codigo y si es una u otra
+se usa si tenes 2 cosas y si es para devolver
+
+Se recomienda... cada vez que modificamos el array de personas o lo que sea
+se refresca la tabla... no va hacer el reload
+
+NODE....
+si ejecutamos node + un archivo javascript, lo va a ejecutar como si fuera un navegador
+cuando instalamos node, se instala el administrador de paquetes de NODE.
+
+json-server... instalarlo... con -g se instala de manera global
+
+--watch-> es lo mismo que poner -w
+json-server --watch db.json -> levante el servidor, como base de datos y que vaya actualizando los cambios

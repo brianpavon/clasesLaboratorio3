@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5</title>
+</head>
+<body>
+    <script>
+       const array1 = [2,3,4];
+       //si quiero cargar estos valores en 3 variables, puedo hacer
+       /*let x = array1[0];
+       let y = array1[1];
+       let z = array1[2];
+       */
+
+       //otra forma es con destructuracion, 
+       let[x,y,z] = array1;//si pongo mas variables, muestra un undefined, si pongo menos no muestro nada
+       console.log(x,y,z);
+
+       const unaPersona = {
+           nombre: "Juan",
+           edad: 20
+       }
+
+        //si quiero sacarlo en dos variables:
+        //let nombre = unaPersona.nombre;
+        //let edad = unaPersona.edad;
+
+       //console.log(nombre,edad);
+
+       //pero con destructuracion:
+       let {nombre,edad} = unaPersona;//con esta linea hago todo lo otro que estaba arriba, no importa el orden sino el nombre de la variable
+       
+       console.log(nombre,edad);
+    </script>
+
+</body>
+</html>

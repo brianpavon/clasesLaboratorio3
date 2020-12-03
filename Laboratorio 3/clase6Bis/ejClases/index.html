@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*casi lo mismo que vimos en C#*/
+        class Persona
+        {
+            constructor(nombre,sexo,edad)
+            {
+                this.nombre = nombre;
+                this.sexo = sexo;
+                this.edad = edad;
+            }
+            set setSexo(sexo)
+            {
+                this.sexo = sexo.toLowerCase();
+            }
+            get getSexo(sexo)
+            {
+                
+            }
+
+            /*aca es todo public en los metodos*/
+            saludar()
+            {
+                console.log(`Hola me llamo Pepe ${this.nombre}`);
+            }   
+            
+            const p1 = new Persona("Juan",30,"m");
+            console.log(p1);
+
+        }
+    </script>
+    
+</body>
+</html>

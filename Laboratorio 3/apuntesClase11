@@ -1,0 +1,37 @@
+bootstrap son clases prearmadas...
+si le agrego la clase table a las tablas...
+
+se pone facherito
+
+Hoy en dia el diseño de las paginas se adaptan a las diferentes resoluciones
+de pantalla
+antes, se programaba para cada tamaño
+
+
+Array en javascript-->tienen muchos metodos...
+los mas usados vamos a ver...
+
+Metodo Filter--> metodo inmutable, no me modifica el array original..
+sino que me devuelve uno nuevo...
+3 parametros, elemento, indice, vector completo
+
+nos devuelve un array nuevo, donde aparecen todos los elementos del array original, que cumplieron la condicion
+le voy a pasar un callback, donde retorne true o false por cada elemento...
+si pasa lo devuelve....
+el filter seria como un where en una base de datos
+
+Metodo Map--> pasa cada elemento a un nuevo vector, producto donde como valor
+va a ser lo que alla retornado el callback..
+agarra uno a uno los elementos y lo retorna al callback,
+devuelve un array con la misma cantidad elementos del array original
+Sirve si quiero hacer alguna modificacion a algo en particular del array
+o por ejemplo para no mostrar algo
+
+el map me devuelve un nuevo array, con el retorno del callback, al cual el map,
+le pasara cada elemento al callback
+
+Metodo Reduce--> asociado con sql, consultas unicas...
+
+Reduce(callback,valor anterior,valor actual,indice)
+y retorna un array
+

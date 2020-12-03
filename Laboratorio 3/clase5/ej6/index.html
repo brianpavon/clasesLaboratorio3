@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5</title>
+</head>
+<body>
+    <script>
+       //PARA CREAR UN MOLDE DE OBJETOS:
+       //funcion constructora
+        function Persona(nombre,edad){
+            //al contrario del clave valor, uso asi
+            // this.nombre = nombre;
+            // this.edad = edad;
+            //operador or si es que no me pasan nada
+            this.nombre = nombre || "natalia natalia";
+            this.edad = edad || -1;
+            //si tengo que declarar metodos
+            /*this.saludar = function(){
+                console.log("Hola me llamo "+ this.nombre);
+            }*/
+        }
+
+        //con el prototype creo que metodos, que van a servir para todas las personas y queda mejor que dentro del constructor
+        Persona.prototype.saludar = function(){
+            console.log("Hola me llamo "+ this.nombre);
+            };
+        // const per1 = new Persona();//puedo hacerlo asi y pasarle parametros despues
+        //const per1 = new Persona("Juan",30);
+        //const per2 = new Persona("Ana",23);
+
+        /*console.log(per1);
+        console.log(per2);
+        per1.saludar();
+        per2.saludar();*/
+        //console.log(typeof per1);//no me dice que tipo es, para eso uso el operador instanceof
+        //console.log(per1 instanceof Persona);//operador binario, tiene algo antes y despues, pregunto si ese objeto es instancia de ese objeto
+        
+        //VAMOS A HACER UNA CLASE EMPLEADO QUE HEREDE DE PERSONA
+        function Empleado(nombre,edad,sueldo){
+            this.sueldo = sueldo || 0;
+            //voy a simular tipo una herencia a la clase persona
+            //this.super = Persona;//Persona, es un puntero a la funcion constructora
+            this.super = Persona.call(this,nombre,edad);//muestra directamente la persona con ese call
+            //puedo llamar al constructor de persona a traves de super
+            this.super(nombre,edad);//esto hace que quede asociado a mi this
+        }
+        Empleado.prototype = new Persona();//que el constructor sea el de persona asi aplico herencia, eso digo aca
+        Empleado.prototype.despedir = function(){
+            console.log("Chau");
+        };
+
+        // const emp1 = new Empleado("Analia",30,60000);
+        // console.log(emp1);
+        // emp1.saludar();
+        // emp1.despedir();
+        function EmpleadoEspecializado(nombre,edad,sueldo,especialidad)
+        {
+            this.especialidad = especialidad || "Inutil";
+            this.super = Empleado;
+            this.super(nombre,edad,sueldo);//llamada al constructor
+        }
+        EmpleadoEspecializado.prototype = new Empleado();//hago que herede de Empleado y a su vez de Persona
+        EmpleadoEspecializado.prototype.contarEspecialidad = function(){
+            console.log("Mi especialidad es "+ this.especialidad);
+        }
+        const emp2 = new EmpleadoEspecializado("Jose",45,70000,"Soldador");
+        console.log(emp2);
+        emp2.contarEspecialidad();
+        //console.log(emp2 instanceof Persona);//va a dar true, porque hereda de persona
+        function Jefe(nombre,edad,apellido){
+            this.apellido = apellido;
+            this.super = Persona;
+            this.super(nombre,edad);
+        }
+        Jefe.prototype = new Persona();
+        const jefe1 = new Jefe("Alicia",43,"Perez");
+
+        console.log(jefe1 instanceof Persona);
+        
+
+    </script>
+
+</body>
+</html>

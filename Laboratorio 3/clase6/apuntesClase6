@@ -1,0 +1,60 @@
+jerarquia--->estilos navegador,externo y in line
+
+La idea es programar con mobile flex...
+
+los div vienen con display block...por default
+el posicionamiento de los objetos, de html.. son estaticos..
+por defecto...
+
+podemos alterar ese posicionamiento estatico que viene por defecto
+
+al poner position: absolute... sale del flujo natural de la pagina...
+deja de ocupar el espacio que ocupaba cuando se renderizo la pagina
+y si le ponemos left, se pone a la distancia que le pongamos, de acuerdo
+al contenedor que este dentro
+
+position: sticky-->relative cuando entra en la pantalla y fixed cuando scroleo
+fuera de el
+
+flex grow--->a medida que achicamos o agrandamos, trataran ocupar el espacio que
+tengan disponible
+
+flex froggi--->juego para aprender flex y posicionamiento jajja
+flexbox defense-->otro juego con css
+
+tag @media... defino que dentro de ciertas medidas haga otra cosa
+
+flex--->herramienta muy poderosa... puedo hacer de todo
+
+
+SAS
+bajar la extension y eso va a compilar automaticamente el sas a css
+todo lo que escriba en css es valido en sas
+
+si creamos un archivo _nombre.scss --> el compilador no lo toma en cuenta
+
+mixing--> una plantilla para aplicar reglas que sean reutilizables
+  @mixin nombre(recibe parametros){}
+  por ej, parametro $width:1px, si no lo paso toma este por defecto
+  
+me olvide de mostrarle el css generado en el navegador. haganlo ustedes: agregan el .css como siempre al html, y cuando exploran en la developer tool del navegador, van a ver que les hace referencia al codigo sass(por el mapping que se genero al compilar)
+  
+JAVASCRIPT
+azucar sintactico-> es como una capa para hacer mas intuitivo el codigo
+
+scope funcional-> definido por una funcion
+				es como si fuera una carpeta, donde lo que declaro adentro no va afuera
+ife-->inmediately function evocation
+
+LO QUE SE USA AHORA ES MODULOS:
+es mas moderno 
+
+para usar clases o archivos dentro de otro js
+import {lo que importo del archivo} from './persona.js';
+/*Esto es como cuando incluiamos un persona.h o en C# una biblioteca*/
+
+para que pueda pasarse clases, metodos o lo que sea, le tengo que poner
+la clase export delante del nombre	
+
+lo que se exporta por default, pongo afuera de {}
+el default se usa si trabajamos con otros framework	

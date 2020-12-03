@@ -1,0 +1,43 @@
+/*$back_color: black;/*creamos una variable*/
+/*$border_type: 1px solid black;
+$link_colo: white; esto despues lo traigo con el @import*/
+/*creamos una variable*/
+div, .miDiv {
+  /*background-color: red;
+    /*aprovechando que tenemos variable,puedo usar asi*/
+  background-color: black;
+  /*border: $border_type;*/
+  border: mx_bordes(2px);
+  /*piso la variable global,lo estoy haciendo solo aca*/
+}
+
+/*header nav ul li a /*voy accediendo a los hijos y etc*/
+/*{
+    color: $link_color;
+}*/
+/*header/*es lo mismo que arriba, quizas no es el mejor ejmeplo*/
+/*{
+    nav
+    {
+        ul
+        {
+            li
+            {
+                a
+                {
+
+                }
+            }
+        }
+    }
+}*/
+/*nexting de reglas,evita que tengamos muchas reglas de un mismo tag*/
+div.importante, .importante.miDiv {
+  background-color: black;
+}
+
+/*heredar las propiedades de otro elemento*/
+.miDiv {
+  width: 100px;
+}
+/*# sourceMappingURL=index.css.map */

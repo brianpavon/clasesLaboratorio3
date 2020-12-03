@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de la pagina</title>
+    <style>
+        header,footer/*aca como ambos son iguales, hago las 2 etiquetas con estas caracteristicas*/
+        {
+            background-color: black;
+            display: flex;
+            flex-direction: column;/*pongo los hijos en columnas*/
+            align-items: center;/*alineao los contenidos */
+            
+        }
+        header
+        {
+            position: sticky;
+            top: 0px;
+        }
+       
+        nav a
+        {
+            color: white;
+            text-decoration: none;
+            background-color: cadetblue;
+            padding: 10px 20px;
+            border: 1px solid cyan;
+            border-radius: 5px;
+        }
+        nav ul
+        {
+            display: flex;
+            list-style-type: none;/*le borro los puntitos que vienen por default*/
+            padding: 0px;
+        }
+        nav li
+        {
+            margin: 10px 20px;
+        }
+        .importante
+        {
+            background-color: yellow;
+            border: 1px dashed red;
+            margin: 0px;
+            padding: 15px;
+            text-align: center;
+        }
+        main
+        {
+            background-color: tomato;
+        }
+        section
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        article
+        {
+            margin-bottom: 10px;/*entre cada articulo hay un margen*/
+            background-color: yellowgreen;
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+        }
+        aside
+        {
+            display: none;/*decido que el aside, no se muestra si estas viendo desde un celu...solo cuando agrandas mucho*/
+            background-color: turquoise;
+        }
+
+        footer p/*pongo el parrafo en blanco*/
+        {
+            color: white;
+        }
+        article p/*esto para que el p ocupe todo el article*/
+        {
+            height: 100%;
+            text-align: center;
+            vertical-align: middle;
+            margin: 0;
+            padding: 50%;
+        }
+        .principal
+        {
+            display: flex;
+        }
+        /*MEDIA QUERY*/
+        @media(min-width: 800px)/*a medida que cruce los 800px hago otra cosa, aplico otras reglas*/
+        {
+            header,footer
+            {                
+                flex-direction: row;/*pongo los hijos en columnas*/
+                justify-content: space-between;
+            }
+            aside
+            {
+                display: block;
+                flex-basis: 30px;/*nos da el ancho de la row flexible que queremos que ocupe*/
+            }
+        }        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./images/logo.svg" alt="">
+        <nav><!--barra de navegacion-->
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Avisos</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p class="importante">
+        Este es un aviso importante
+    </p>
+    <div class="principal"><!--hago este div para aplicarle algo a main y aside-->
+        <main>
+            <section><!--seccion de los articulos publicados-->
+                <article><p>1</p></article>
+                <article>2</article>
+                <article>3</article>
+                <article>4</article>
+            </section>
+        </main>
+        <aside><!--esto no lo voy a mostrar de una, despues lo veo con css, pensando en mobile first-->
+            Este es mi aside
+        </aside>
+    </div>
+    <footer>
+        <p>
+            Todos los derechos reservados &copy;
+        </p>
+        <nav><!--barra de navegacion-->
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Avisos</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </footer>
+
+</body>
+</html>

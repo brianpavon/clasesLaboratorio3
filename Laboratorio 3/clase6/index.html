@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenido
+        {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            /*display: inline;si pongo asi no puedo poner ancho y alto...*/
+            display: block;/*Me permite dimensionar el div*/
+        }        
+        div:nth-of-type(3)/*si pongo asi, me pinta solo el nro 3*/
+        {
+            background-color: red;
+        }
+        /*div:nth-of-type(1)
+        {
+            position: relative;
+            left: 50px;
+        }*/
+        .contenedor
+        {
+            display: flex;
+            /*flex-direction: row-reverse;/*pone el ultimo al primero y viceversa*/
+            flex-direction: row;
+            flex-wrap: wrap;/*en la medida que haya espacio se ubica uno al lado sino se manda abajo*/
+            justify-content: space-evenly;/*cuando vaya achicando, se distribuye el espacio disponible*/
+            height: 800px;
+            align-items: center;
+            align-content: center;/*colapsar el espacio de las row flexibles*/
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="contenido" style="position:sticky; top: 0px">1</div>-->
+    <!--este relativo arranca desde el estatico,y cuando ponemos left, el borde izquierdo se desplaza 50px 
+    desde donde estaba originariamente-->
+    <!--<div class="contenido" style="position:absolute; left: 300px">2</div>
+    <div class="contenido">3</div>
+    <div class="contenido" style="position: fixed;">4</div>-->
+    <!--position fixed, hace que quede fijo y si scroleo no se mueve, se posiciona por sobre el resto-->
+    <!--<div class="contenido">5</div>
+    <div class="contenido">6</div>-->
+    <div class="contenedor">
+        <!--siempre que queramos posicionar elementos hermanos los encerramos en un div o en un tag superior
+        y a ese le aplicamos flex...para que queden uno al lado del otro-->
+        <div class="contenido" style="order:3;" style="flex-grow: 1;">1</div>
+        <!--con el order los pongo en un orden distinto al que esta codeado,sino le pongo order, ese va primero
+        a los que si tuvieron-->
+        <div class="contenido" style="flex-grow: 0.5;">2</div>
+        <div class="contenido" style="order:5;">3</div>
+        <div class="contenido" style="order:6;">4</div>
+        <div class="contenido" style="order:1;">5</div>
+        <div class="contenido" style="order:2;">6</div>
+    </div>  
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5</title>
+</head>
+<body>
+    <script>
+       //PARA CREAR UN MOLDE DE OBJETOS:
+       //funcion constructora
+        function Persona(nombre,edad){          
+            this.nombre = nombre || "natalia natalia";
+            this.edad = edad || -1;           
+        }        
+        Persona.prototype.saludar = function(){
+            console.log("Hola me llamo "+ this.nombre);
+        };
+        const p1 = new Persona("Juanito",40);
+
+        function informarEdad(){
+            console.log(this.edad);
+        }
+        // informarEdad(p1);//esto devuelve undefined
+        informarEdad.call(p1);//--> aca si, y con call, lo primero que le paso es edad, simula algo como interfaz
+
+    </script>
+
+</body>
+</html>

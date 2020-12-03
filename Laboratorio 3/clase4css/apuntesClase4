@@ -1,0 +1,95 @@
+css cascade style sheet... hojas de estilo en cascada
+porque asi? porque hay varias formas de incluirlas en nuestra pagina
+
+el css va en un archivo aparte
+
+se compone del selector y los estilos...
+selector es para seleccionar cuales son los elementos de html que le voy aplicar los estilos
+
+selector por etiqueta--> es la etiqueta a la que se van aplicar a esas etiquetas
+rgba--> es para ver la opacidad de un color
+rgb-->red, green, color para ver desde la paleta
+
+selector por clase--> definir propiedades que apliquen a los diferentes
+					   objetos y elementos que esten en esa clase
+					   en la definicion de clase va punto+nombre .miClase
+
+como aplico en html? voy al html sobre el elemento que quiero aplicar
+y ponemos class = nombre de la clase	
+
+la regla de class le gana a la de etiqueta... gana el que tiene mas especificidad
+si se llaman 2 clases se pisa una de la otra de acuerdo a como este codeado
+
+tambien podemos usar id, y ahi somos mas especificos
+para poner id se usa #miId y en html se coloca id="miId"
+
+MALA PRACTICA PARA SALIR DEL PASO, SE PONE IMPORTANT DELANTE DE UNA REGLA
+*-->es el selector universal, con asterisco hacemos cambios mas en general,pero igual tiene especificidad 0
+asi que cualquier regla que apliquemos pisa esto
+
+es mejor ordenar el css de general a particular
+			   
+tenemos manera, de ir metiendonos dentro de un arbol por ej
+div
+	a
+div
+
+hacemos referencia,div a{}
+seria como un selector descendiente... 
+para decirles que son los hijos de div, seria div>a, 
+
+COLOR PICKER, ES UNA EXTENSION O PLUG IN PARA OBTENER EL CODIGO DE UN COLOR QUE NOS HAYA
+GUSTADO EN LA PAGINA POR EJ.
+
+se puede agregar un atributo para ponerle una imagen de fondo ej
+
+podemos cambiar el tamaño de un elemento con px o con viewport high o view port width
+view port heigth y width son medidas relativas
+
+otra es em ----> 1 em son 16 px (se llama em porque hace referencia al tamaño de la letra M)
+otra es rem ---> hace referencia a una ruta
+
+padding-->distancia que hay entre el borde y el contenido del elemento
+border-->el borde del elemento, puede tener una medida
+margin-->es el margen exterior de ese elemento
+
+box sizing--> es para modificar la caja de ese elemento, el tamaño de la caja, hay
+			  que sumar el borde, margin,padding...
+			  
+hay pseudo elementos y pseudo clases
+los primeros son elementos que no estan en etiqueta...
+y las pseudo clases el mas conocido es hover, este es cuando pasamos por arriba el mouse
+
+cuando elegimos tipos de letras, es conveniente elegir varias como plan b
+se ponen las mas comunes que casi todos tienen instalados
+
+cdnjs.com---> buscamos font awesone para ver iconos
+con developer network, son un conjunto de librerias
+cuando incorporamos librerias de terceros, ese link va arriba de cualquier referencia
+de nuestros archivos que estemos linkeando
+
+para escribir rapido una clase en html podemos hacer
+. + tab y hace el div con la class
+
+y para escribir el id
+#p por ej
+
+y para poner clase y id
+p.#nombreId
+
+
+-----------------------JAVA SCRIPT----------------------------
+Variable se hace a nivel de en el scope global y de una funcion
+
+el scope global en un navegador es window...
+si usamos var y esta en un scope global y despues en una funcion la pisa
+
+let en vez de var...		 
+YA NO SE USA VAR---> se usa LET
+js tiene un comportamiento que se llama hoisting, es como que antes
+de ejecutar, pega una primera lectura al codigo, eleva toda la declaracion de variables
+y es como se declaran arriba variables expresadas con var
+
+se implento tambien cont--> es como una constante
+
+objetos,funciones ,array y etc lo vamos a cargar como const no con let

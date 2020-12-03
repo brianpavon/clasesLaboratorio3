@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5</title>
+</head>
+<body>
+    <script>
+       //OBJETOS:
+        //const obj = {};//asi declaramos un objeto ya
+        // const obj2 = new Object();//esta ya no se usa asi, se usa el primer renglon
+
+        //un objeto literal, es como cuando ponemos un string entre las comillas
+        const unaPersona = {
+            nombre: "Juan",
+            edad: 30,
+            nada: true,//puedo poner un booleno como valor
+            hobbies:["ajedrez","ping pong","fortnite"],
+            //puede tener un objeto como atributo tambien
+            redesSociales:{
+                twitter:"@juanperez",
+                facebook: "juani2004",
+                instagram: "@juanito",
+            },
+            //puedo declarar un metodo
+            //se declara como clave valor... osea nombreFuncion:function(){},
+            saludar:function(){
+                //console.log("Hola me llamo "+this.nombre+" y tengo "+ this.edad + " años");
+                //esto lo puedo hacer tambien con interpolacion
+                console.log(`Hola me llamo ${this.nombre} y tengo ${this.edad} años`);
+            },  
+        };
+        //tambien le puedo agregar otro atributo, en algun momento, y cargarle valores, sobreescribir metodos
+        //o agregarle nuevos, afuera de la declaracion
+        unaPersona.genero = "M";    
+        //SI QUIERO ESCRIBIR OTRO OBJETO, TENDRIA QUE COPIAR TODO ESO Y ESCRIBIR
+        /*const otraPersona = {
+            nombre: "Juana",
+            edad: 23,
+            nada: true,//puedo poner un booleno como valor
+            hobbies:["ajedrez","ping pong","fortnite"],
+            //puede tener un objeto como atributo tambien
+            redesSociales:{
+                twitter:"@juanperez",
+                facebook: "juani2004",
+                instagram: "@juanito",
+            },
+            //puedo declarar un metodo
+            //se declara como clave valor... osea nombreFuncion:function(){},
+            saludar:function(){
+                //console.log("Hola me llamo "+this.nombre+" y tengo "+ this.edad + " años");
+                //esto lo puedo hacer tambien con interpolacion
+                console.log(`Hola me llamo ${this.nombre} y tengo ${this.edad} años`);
+            },  
+        };*/
+
+        //OPERADOR FORIN, se pone el objeto a recorrer, y nos va a devolver ese key
+        for(const key in unaPersona){
+            console.log(key,unaPersona[key]);//accedo al atributo y me imprime cuanto vale, o lo que tiene cargado
+        }
+
+        console.log(unaPersona);
+        unaPersona.saludar();
+        console.log(Object.keys(unaPersona));//me muestra el array con las llaves o atributos
+        console.log(Object.values(unaPersona));//me deuvele el array con lo que esta cargado en las llaves
+
+        //console.log(otraPersona);
+        //otraPersona.saludar();
+        // esto no da asi, ver ej6 asi se ve como se implementan los objetos
+        /*function f1(){
+            console.log("soy una funcion nombrada");
+        }
+        //esto es asignarle a la variable f2, la funcion
+        const f2 = function(){
+            console.log("Soy una funcion expresada");
+        }
+        //un nombre de una funcion, guarda la direccion de memoria donde esta la funcion
+
+        //ambas se muestran igual, pero no son iguales expresada que nombrada
+        f1();
+        f2();
+
+        //pensar en delegados seria...
+        const f3 = f1;
+
+        //y muestro:
+        f3(); // va a ser como los delegados en prog2
+
+        //OTRA ES IIFE-->inmediate I function E
+        (function (){
+            console.log("soy una funcion nombrada");
+        })();*/
+
+    </script>
+
+</body>
+</html>

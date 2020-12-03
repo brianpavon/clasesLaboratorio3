@@ -1,0 +1,107 @@
+LABORATORIO 3, VEREMOS PROGRAMACION WEB, LO VEMOS DEL LADO FRONT END
+
+html5, css y javascript.
+
+html---> estructura, lenguaje de marcado, NO ES LENGUAJE DE PROGRAMACION, ES DE ETIQUETAS
+css--->lenguaje de hojas de estilo en cascada
+javascript---> logica de programacion, comportamiento, validaciones
+
+TODO LO QUE ESTE EN FRONT END, SE BASA EN ESTOS 3
+
+vamos a ver bootstrap del primer parcial en adelante
+
+AJAX---> JAVASCRIPT ASINCRONO
+
+originalmente un sitio era formado por mas de una pagina,actualmente son aplicaciones de una sola pagina
+single page application, se muestra una sola pagina y lo que se hace es actualizar sectores de una parte de la pagina
+
+JSON---> sustituye al formato xml, como se transmite la informacion entre el front y back
+
+JQUERY--> es un framework,conjunto de funciones de javascript
+	al principio ponia como una capa entre cada navegador, para que funcione bien en cualquier navegador
+hoy ya no se usa tanto jquery,porque casi todos se programa de la misma manera, los navegadores actuales son compatibles entre si
+con jquery se puede hacer mantenimiento de sitios anteriores, pero actualmente no se desarrolla casi con eso
+
+javascript se actualiza año a año, y se usan muchos framework...entendiendo como funciona javascript, podemos trabajar
+con diferentes framework, eso se puede aprender facil....
+javascript puro se dice javascript vainilla
+
+BOOTSTRAP ---> es un framework de CSS, css es mas para un diseñador grafico, vamos a ver el uso comun y standard
+tiene clases compiladas y ya hechas, con lo que se puede desarrollar muy facil y rapido pero la contra es que 
+muchas paginas se desarrollan con eso y se ven muchas iguales.
+
+TYPESCRIPT--->cada vez se menos en la cursada... el mismo creador que C#, al estar las aplicaciones en nubes, con esto
+se trato de migrar a esta nueva tecnologia. Lo que hace es hacer un javascript mas tipado, el navegador traduce a javascript el typescript
+Se usa para que el programador que esta muy adaptado a lenguajes mas tipados, asi no se siente tan anormal.
+ANGULAR usa TYPESCRIPT
+
+Todo esto lo vamos a hacer con un editor de texto, aca usamos Visual Studio Code
+En el mundo web hay muchos framework,bibliotecas de terceros, son infinitas las herramientas o la combinacion de las herramientas
+por eso se usan manejaddores de paquetes, usamos JUMP (es un gatito) y usamos NPM
+Estos manejaddores de paquetes nos ayudan a ordenar todas las herramientas y etc.
+
+LA MAYORIA DE LAS ACCIONES EN EL MUNDO WEB ES ASINCRONO
+
+Cuando anteriormente, eran todas aplicaciones locales.... fue evolucionando hasta transformarse aplicaciones
+que estan entre servidor y cliente.... todo paso a estar en servidores web y no locales....
+Con esto aparecio un monton de tecnologia back end y front end...
+
+Hoy en dia toma mucha importancia NODE que usa javascript. Todo esto de tener separada en 2 partes la aplicacion,
+hace que aparezca el concepto de asincronia...
+
+Hasta ahora todo era bastante sincronico.
+
+Antes Multiple Page Applications----- ahora Single Page Applicationns
+
+JAVASCRIPT es de tipado dinamico, los errores se ven mas en la ejecucion que en la compilacion.
+Antes con los IDE nos dabamos cuenta de esto...TYPESCRIPT viene a resolver un poco esto, ya que le agrega
+lenguaje tipado y se pueden ver errores en lenguaje de compilacion...
+
+VAMOS A INCORPORAR AL Visual Studio Code, LE VAMOS AGREGAR UN PLUG IN QUE USE UN SERVIDOR PARA ACTUALIZAR...
+live server... abrimos el archivo desde el visual open with live server... y abre automaticamente en el servidor local
+
+Hay una tabla de caracteres especiales que se acceden con &, que se escriben para que se visualicen de cierta forma en la pagina
+
+<header></header><!--cabecera de la pagina-->
+    <main></main><!--contenido principal de la pagina, lo mas importante de la pagina por decirlo de alguna manera-->
+    <section></section><!--agrupo contenido que este en comun o relacionado-->
+    <article></article><!--contenido individualizado, algo que esta dentro de una seccion por ej-->
+    <aside></aside><!--se coloca info que no tiene que ver con el contenido principal de la pag, por ej publicidad-->
+    <nav></nav><!--es una barra de navegacion, van los links de una parte de la pagina por ej-->
+    <footer></footer><!--pie de pagina-->
+    <strong></strong><!--le digo a los motores de busqueda que cierta palabra o parrafo es importante asi es tenido en cuenta al buscar-->
+	
+TENEMOS QUE TRATAR DE ESCRIBIR EL HTML LO MAS BASICO POSIBLE Y SE CUSTOMIZA DESDE CSS, ES UNA BUENA PRACTICA
+
+HTML---> LENGUAJE DE MARCADO DE HIPERTEXTO
+id manera de identificar una etiqueta..
+con la etiqueta a puedo ir a una parte de una pagina que fue identificada con un id o puedo ir a otra pagina
+siempre las etiquetas "a" van dentro de una en bloque
+si es dentro de la misma pagina se llama marcador...
+si es a otra pagina es un hipervinculo
+
+si queremos que se abra en una ventana nueva la pagina del enlace externo, pongo target = blank
+
+DOS TIPOS DE DIRECCIONAMIENTO:
+-direccion absoluta: arranca con un protocolo
+-direccion relativa: arranca desde donde estamos, en nuestro caso en el local host, puedo escribir directamente el nombre
+					o puedo hacer... "./pagina2.html". Cuando trabajamos con servidor todo tiene que ser relativo
+
+Una pagina va intentar cargar por defecto el family font por defecto de la pagina,
+por ej el iconito que aparece al lado del title de la pagina se puede modificar
+el icono de la pagina, es el unico que se guarda en la misma carpeta que el index, las imagenes en otra carpeta
+
+IMAGENES EN LA WEB HAY DE 2 TIPOS:
+bitmap---> es un mapa de bit, como si fuera una matriz,pinta de un color cada bit,(esta se pixela cuando se agranda)
+vectoriales--->crea una imagen a traves de una formula matematica por decirlo de alguna manera(se ajusta al tamaño)
+
+jpg--> pensado para fotos e imagenes
+png-->permite transparencia, color plano y texto por encima por ej
+svg--> si quiero mostrar un logo, y es una imagen vectorial.
+
+Tratar de buscar para nuestras imagenes que no tengan derecho de autor. Pexels es un pagina piola
+se pueden traer las paginas por link de la pagina en la etiqueta img le ponemos toda la ruta de la pagina
+
+Tambien lo podemos cargar desde local...
+
+Para subir un nivel de directorio se usa ../

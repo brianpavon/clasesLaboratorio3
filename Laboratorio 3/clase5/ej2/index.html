@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5</title>
+</head>
+<body>
+    <script>
+        //PARAMETROS REST
+        // function sumar(a,b)
+        // {
+        //     return a+b;
+        // }
+
+        function sumar(a,b,...c)
+        {
+            let suma = a+b;
+            //aca si me pasan mas de 2 parametros, lo hago en este c, que tiene la funcion dentro
+            c.forEach(function(elemento){
+                suma += elemento;
+            });
+            return suma;
+        }
+
+        console.log(sumar(2,4));
+        console.log(sumar(2,4,4,3,6));
+
+    </script>
+
+
+</body>
+</html>

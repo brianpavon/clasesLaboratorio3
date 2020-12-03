@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*function sumar(a,b)
+        {
+            /*si hago esto simulo una peticion al servidor
+            y con este timeout se va a poner en espera, hasta que se vacíe
+            la pila y despues realiza este codigo o pasa estos parametros
+            pero como todo el resto se sigue ejecutando, va a dar un error*/
+        /*let resultado;
+        setTimeout(() => {
+            resultado = a+b;
+            console.log("Tengo el resultado de la suma!!!");
+        }, 2000);
+        return resultado;
+    }
+    function cuadrado(a)
+    {
+        return a*a;
+    }
+    function multiplicar(a,b)
+    {
+        return a*b;
+    }
+    let suma = sumar(4,3);
+    let cuad = cuadrado(suma);
+    let rta = multiplicar(cuad,10);
+
+    console.log(rta);*/
+
+        /*asi seria con callback*/
+        function sumar(a, b, callback) {
+            let suma;
+            setTimeout(() => {
+                //manejo de errores
+                if (typeof a !== "number" || typeof b !== "number")
+                {
+                    callback("Todo mal en sumar");
+                    //return;//para evitar el else se usa mucho esto
+                }
+                else
+                {
+                    suma = a + b;
+                    console.log(suma);
+                    console.log("Tengo el resultado de la suma!!!");
+                    callback(null,suma);
+                }
+            }, 2000);
+        }
+        function cuadrado(a, callback) {
+            let cuad;
+            setTimeout(() => {
+                if (typeof a !== "number")
+                {
+                    callback("Todo mal en cuadrado");
+                    //return;//para evitar el else se usa mucho esto
+                }
+                else
+                {
+                    cuad = a * a;
+                    console.log(cuad);
+                    console.log("Tengo el resultado del cuadrado!!!");
+                    callback(null,cuad);
+                }
+            }, 1500);
+        }
+        function multiplicar(a, b, callback) {
+            let producto;
+            setTimeout(() => {
+                if (typeof a !== "number" || typeof b !== "number")
+                {
+                    callback("Todo mal en multiplicar");
+                    //return;//para evitar el else se usa mucho esto
+                }
+                else
+                {
+                    producto = a * b;
+                    console.log(producto);
+                    console.log("Tengo el resultado del producto!!!");
+                    callback(null,producto);
+                }
+            }, 2000);
+
+        }
+        sumar(4, 3, (err,suma) => {
+            if(err)
+            {
+                console.log(err); 
+                return;
+            }
+            cuadrado(suma, (err,cuad) => {
+                if(err)
+                {
+                    console.log(err);
+                    return;
+                }
+                multiplicar(cuad, 10, (err,prod) => {
+                    if(err)
+                    {
+                        console.log(err);
+                    }
+                    else
+                    {
+                        console.log(prod);
+                    }
+                   
+                });
+            });
+        });
+
+        
+    </script>
+
+</body>
+
+</html>

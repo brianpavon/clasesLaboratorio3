@@ -1,0 +1,67 @@
+Manejo del DOM (Document Object Model)
+
+desde javascript, se mapean los elementos del html,como objetos con sus propiedades
+
+nodelist--> se puede usar foreach
+querySelectorAll-->trae todos
+querySelector-->trae el primero que encuentra
+
+En la actualidad se usa querySelector, querySelectorAll y getElementById
+
+Los arrays son objetos, en js... por eso se usan const, para obtener la direccion de memoria
+
+Cuando hablamos de clase puedo trabajar de 2 maneras:
+classList o className
+segundo devuelve un texto con el nombre de la clase que tiene ese elementos
+primero devuelve un DOMTokenList, no es un array pero es parecido
+
+
+Metodo toogle, si tiene clase se lo saca y sino le agrega uno
+Resumen para trabajar con atributos:
+elemento.setAttribute(atributo,valor que le paso)
+elemento.getAttribute(atributo que me va a devolver)
+elemento.removeAttribute(atributo que va a remover)
+elemento.hasAttribute(el que pregunto si existe)
+elemento.classList.toogle(atributo a agregar)
+
+elemento.classList--> referencia a ese pseudo array
+        .classList.add-->agrega una clase
+		.classList.toogle-->agrega o quita
+
+Se usa mucho poner la variable con el signo $ adelante....
+se le da como referencia que es una interfaz grafica
+
+En le DOM, hay diferentes tipos de nodos
+
+Para inyectar texto, lo correcto es crear un objeto y despues inyectarlo
+para crear objeto es createElemnt..	
+
+Metodo para reemplazar una clase por otra clase...
+elemento.classList.replace(clase a reemplazar, nueva clase)
+	
+Html collectin no es un array... pero se podria convertir
+
+Desde la pagina de node.nodetype puedo saber que tipo es, ya que son nros...
+
+Los nodos puede ser de diferentes tipos
+
+
+JSON:
+javascript object notation--> notacion de objetos de javascript
+es una cadena de caracteres, es un string--> se usa para enviar informacion
+TODO LO QUE SE ENVIA SE HACE COMO CARACTERRES...desde bluetooth, por cable o como sea
+es la manera de mostrar en cadena el lenguaje de javascript,
+casi todos permiten convertir un objeto de lenguaje a json y de json al lenguaje
+
+JSON supero al uso de XML, ocupa menos caracteres, y es mas facil de recorrer
+
+
+LOCALSTORAGE:
+Lo unico que puedo guardar es texto
+4 metodos... 
+
+//HACER PARA LA SEMANA QUE VIENE...
+bajar de mockaroo varias personas... 20 al menos, id,nombre,apellido,mail y sexo
+
+
+PARCIAL, VA A TENER UN FORMULARIO Y UNA TABLA con los datos que se vayan cargando

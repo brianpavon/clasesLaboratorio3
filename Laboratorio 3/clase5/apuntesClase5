@@ -1,0 +1,124 @@
+JAVA SCRIPT....
+objetos, y array---> se declaran como constante..todo lo que tenga referencia a algo, es con const-
+
+FUNCIONES ANONIMADAS Y NOMBRADAS:
+function f1(){
+	console.log("soy una funcion nombrada);
+}
+esto es asignarle a la variable f2, la funcion
+const f2 = function(){
+	console.log("Soy una funcion expresada);
+}
+un nombre de una funcion, guarda la direccion de memoria donde esta la funcion
+
+ambas se muestran igual, pero no son iguales expresada que nombrada
+f1();
+f2():
+
+pensar en delegados seria...
+const f3 = f1;
+
+y muestro:
+f3(); // va a ser como los delegados en prog2
+
+
+FOROF:
+
+tiene que ser sobre un elemento iterable, no sirve para objetos...
+const->elemento
+of-> sobre que itero...
+
+foreach...
+con array, se puede usar array.foreach(se le pasa una funcion o una referencia a ella);
+
+esta funcion sera anonima, en el lugar donde la llamo es en este foreach
+el callback, recibe un elemento del array...en este caso recorre el array y cada elemento
+del array se lo va a pasar a la funcion
+
+SPREAD OPERATOR... OPERADOR DE PROPAGACION
+
+se puede declarar asi-.... let array2 = [...array]; esos 3 puntos es el spread operator
+si paso 2 array, con el spread operator... paso elemento por elemento
+
+
+PARAMETROS REST:
+se usan cuando no sabemos cuales y cuantos son los parametros que van a venir en esa llamada
+
+se usan los 3 puntos, si vienen mas de 2 parametros, se captura en el parametro c, que va a ser un array
+van a venir en la llamada de la funcion, que superen los 2 parametros
+
+... ->pueden ser valores dentro de una llamda de una funcion, o puede ser para asignar.
+
+
+DESTRUCTURACION:
+se usa para ahorrar lineas de codigo, se acorta mucho mas el codigo
+
+ESTO ES IGUAL A UNA SOLA LINEA DE CODIGO
+/*let x = array1[0];
+       let y = array1[1];
+       let z = array1[2];
+       */
+
+       //otra forma es con desestructuracion
+       let[x,y,z] = array1;
+
+con objeto tambien:
+const unaPersona = {
+           nombre: "Juan",
+           edad: 20
+       }
+
+        //si quiero sacarlo en dos variables:
+        //let nombre = unaPersona.nombre;
+        //let edad = unaPersona.edad;
+
+       //console.log(nombre,edad);
+
+       //pero con destructuracion:
+       let {nombre,edad} = unaPersona;//con esta linea hago todo lo otro que estaba arriba
+       console.log(nombre,edad);
+	   
+
+
+OBJETOS:
+en js todo es un objeto, ese es el dicho
+lo hacemos con const.
+const obj = {}; asi ya declaramos un objeto, el array era []
+
+un objeto null no es lo mismo que vacio.... null es la no direccion de memoria,puntero que no apunta nada
+
+se dice que los objetos, son conjuntos de pares de clave-valor
+el objeto puede tener atributos,
+string,numeros,booleano, array, objeto
+el navegador acomoda los atributos por orden alfabetico.
+
+puedo declarar ahir dentro los metodos
+
+interpolacion, puedo traer funciones de js o por ej mostrar una cadena asi:
+console.log(`Hola me llamo ${this.nombre} y tengo ${this.edad} años`);
+en vez de concatenar
+al no ser un lenguaje fuertemente tipado, puedo agregar atributos, metodos
+o sobreescribir metodos, en cualquier parte del codigo, no hace falta que sea en la declaracion del objeto
+
+se puede acceder a los atributos, metodos, a traves de los array asociativo por ej
+console.log(unaPersona["nombre"];//va mostrar el nombre
+un objeto no es un array pero se puede tratar como un array asociativo, para recorrer por ej
+
+forin---> recorre el objeto a traves de sus llaves, atributos
+
+Object.keys(nombreDeMiObjeto)--> y me muestra 
+metodo object.hasOwnProperty("nombre del atributo")-> nos dice si ese objeto tiene o no ese atributos
+
+
+FUNCIONES CONSTRUCTORAS DE OBJETOS:
+con camelCase y en mayuscula
+dentro se asignan los atributos y la funcion tambien las puedo definir ahi
+esta bueno declarar los metodos con prototype, pero es para que el metodo no quede en memoria...
+asi hay un prototipo por todos los objetos...
+
+Herencia prototipica
+
+
+
+CALL:
+algo que tienen todas las funciones...

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script>
+        console.log(document.getElementById("idNombre"))/*va a dar un puntero*/
+    </script>
+</head>
+<body>
+    <form method="GET" action="pagina.php"><!--POR AHORA NO USAMOS EL ACTION, SINO PONDRIAMOS EL LINK,y method por defecto es get-->
+        <!--<div>-->
+        <!--si pongo input + tab, me autocompleta con un textbox
+        onclick="alert('Hiciste click');" esto no va bien que este dentro de la etiqueta
+        -->
+        <label  for="txtNombre">Nombre:</label><!--con el for: id hago que este label tome foco en ese id-->
+        <!-- podria usar placeholder="Ingrese su nombre"-->
+        <input type="text" name="nombre" id="txtNombre">
+        <!--otra forma es:
+            <label for="txtNombre">Nombre: <input type="text" name="nombre" id="txtNombre"> </label>
+        -->
+        <!--</div>uso div para que se maquete mejor, con br no es taaan prolijo-->
+        <br><br><!--asi es menos cheto-->
+        <label for="txtEdad">Edad:</label>        
+        <input type="text" name="edad" id="txtEdad"><br><br>
+        <button>Enviar</button>
+
+    </form>
+</body>
+</html>

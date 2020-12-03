@@ -1,0 +1,91 @@
+
+SINCRONICO --- ASINCRONICO
+Sincronico-->algo que sucede en este momento, cuando termino de hacer
+esa tarea ejecuto lo otr
+
+Asincronico--> es algo que se va a ejecutar en el futuro, en algun momento realizara la funcion
+
+
+BLOQUEANTE ---- NO BLOQUEANTE
+Bloqueante--> asociado con sincronismo, aunque no es lo mismo
+				Ej: llamo una funcion, y hasta que ella no termina no puedo usar otra funcion
+				Hacer un proceso y hasta que no termine no arranca otra
+
+No Bloqueante-->asociado con asincronico, aunque no es lo mismo
+				No interrumpe el stack, libera el stack...queda en stand by hasta que pueda volver a ejecutarse
+				
+
+PARALELISMO ---- CONCURRENCIA
+Paralelismo--->2 procesos se van ejecutando de manera simultanea. De acuerdo a los nucleos
+				que tenga, los va poniendo a disposición para que vayan resolviendo tareas.
+
+Concurrencia--> no se realiza de manera simultanea, pero que el procesador va particionando
+				como va atendiendo cada proceso. Parece que funciona de manera paralela pero no
+
+El lemguaje JavaScript es concurrente y asincronico
+Concurrente, tiene un solo hilo que atiende los procesos
+Ese hilo se llama event loop (bucle de eventos) Tengo un solo stack, donde se van apilando
+las tareas a resolver.
+Es asincronico, pensado para un entorno web, tenemos cliente y servidor.
+El programa se ejecuta en 2 lados a la vez
+No bloqueante-->cuando le hacemos una peticion al servidor, el navegador no se queda sin hacer nada
+sino que se envian peticiones y se van resolviendo, pero el programa continua
+
+latenflip(pagina que usa para ver ejemplos de event loop)loupe es la herramienta
+
+la web api, espera la respuesta del servidor, por decirlo de alguna manera
+
+Cuando aparecen tareas en el call stack, el event loop lo atiende,
+cuando voy a pasar algo que se va a realizar despues, se pasa a la web api
+cuando este listo todo lo que tiene para ejecutar, pasa a la callback queue
+
+Y cuando la call stack se vacia, toma los elementos de la cola
+
+
+JQUERY-->no lo vamos a ver... pero se usa $
+
+El problema de lo bloqueante es cuando estoy en entorno asincronico
+
+Una de las maneras, de manejar los asincronismos... seria pasandole un callback
+
+
+CALLBACK HELL:
+cuando empezamos a encadenar muchas funciones... la funcion que reune todoos los callback
+
+Promesas:
+Es un objeto...
+lo que hace esto es que cuando tenga lo que tiene que hacer te lo va a devolver
+la diferencia con callback es que tiene return
+y que ademas no se hace el callback hell,
+
+el constructor recibe(funcion anonima(resolvio,o no resolvio))los metodos son resolve,reject
+con un promesa, es... si pude conseguir se lo paso a resolve
+sino a reject
+
+tiene 2 metodos, el metodo then y catch
+THEN--->cuando tengas el resultado de la suma hace X cosa
+CATCH--->capturo lo del metodo reject
+cuando un arrow function, recibbe un solo parametro puede omitir los parentesis
+
+CUANDO HACEMOS 1 O  2 LLAMADAS A FUNCIONES....
+usamos callback
+
+Promesa cuando tenemos mas 2 callback anidados
+
+
+FUNCION ASINCRONA
+Hay gente que no le gusta el then, then, then...
+no reemplazan las promesas sino que las "adornan"
+las funciones siguen retornando promesas, cambia la forma en las que la llamo
+evita poner los then
+
+Usar la palabra async y await
+y colocar las funciones entre try catch
+Todo esto hace que no se detenga el event loop, y simule un sincronismo
+
+
+TANTO POR FUNCIONES ASINCRONICAS,CALLBACKS O PROMESAS--> OBTENEMOS EL MISMO RESULTADO
+lograr manejar la asincronia
+
+
+

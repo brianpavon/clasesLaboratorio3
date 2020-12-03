@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!--<style> esto lo mande todo al archivo css, no es una buena practica poner todo aca sino en css
+        table
+        {
+            /*border: 1px solid black;si quiero agregar los estilos puede ir aca o lo correcto seria en css*/
+            border-collapse: collapse;
+           
+        }        
+        td /*aca le aplico estilo a las etiquetas que escribo*/
+        {
+            border: 1px solid black;/*con esto me ahorro 3 lineas de codigo*/
+            /*border-color: black;
+            border-width: 1px;
+            border-style: dotted;*/
+            text-align: center;
+            padding: 5px;
+        }
+        th
+        {
+            background-color: #444;
+            color: #fff;
+        }
+        tfoot
+        {
+            background-color: brown;
+        }
+    </style>-->
+</head>
+<body>
+    <!--TABLAS-->
+    <table>
+        <caption>Horarios de la facu</caption><!--APARECE COMO UN TITULO ARRIBA DE LA TABLA-->
+        <colgroup><!--ETIQUETA NO VISIBLE, Y SE PONE UNA ETIQUETA POR CADA COLUMNA QUE TENGAMOS-->
+            <!--representa cada columna de mi tabla...-->
+            <col span="4"><!--asi expando en 4 la columna, solo pongo span porque estoy en una columna-->
+            <!--<col>
+            <col>
+            <col>-->
+            <col style="background-color: darkgreen;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Lunes</th><!--CELDA DE CABECERA-->
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Prog III</td>
+                <td>Labo III</td>
+                <td>Contable</td>
+                <td>Ingles</td>
+                <td>Matematica</td>
+            </tr>
+            <tr>
+                <!--<td>Prog III</td> esta esta demas entonces la borro-->
+                <td>Base de Datos</td>
+                <td>Contable</td>
+                <td>Ingles</td>
+                <td>Matematica</td>
+            </tr>
+            <tr><td colspan="5">Recreo</td></tr><!--PARA QUE SE EXPANDA A LO ANCHO DE LA TABLA-->
+            <tr>
+                <td>Prog III</td>
+                <td>Labo III</td>
+                <td>Contable</td>
+                <td>Ingles</td>
+                <td>Matematica</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td>Rampi</td>
+            <td>Baus</td>
+            <td>Mutti</td>
+            <td>Villegas</td>
+            <td>Scarafilo</td>
+        </tfoot>
+    </table>
+    <br>
+    <br>
+    <!--PRACTICA DE TABLA-->
+    <table>
+        <caption>EJEMPLITO DE DIBUJAR TABLA</caption>
+        <tbody>
+            <tr>
+                <td colspan="3">A</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td colspan="2">D</td>
+                <td>E</td>
+            </tr>
+            <tr>
+                <td colspan="4">F</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+                <td>J</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <br>
+    <!--SEGUNDO DE TABLAS-->
+    <table>
+        <caption>Ej 2 tablas</caption>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td rowspan="3">C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td rowspan="2">E</td>
+            <td>F</td>
+            <td rowspan="3">G</td>
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>            
+        </tr>
+    </table>
+    <br>
+    <br>
+    <!--TERCERO DE TABLAS, hacer que F ocupe el centro, donde esta E H C-->
+    <table>
+        <caption>Ej 3 tablas</caption>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td colspan="2" rowspan="2">F</td>
+            <td rowspan="3">G</td>            
+        </tr>
+        <tr>
+            <td>H</td>
+        </tr><!--ESTO VACIO ES CUALQUIERAAA-->
+        <tr>
+            <td>I</td>
+            <td>J</td>
+            <td>K</td>            
+        </tr>
+    </table>
+</body>
+</html>

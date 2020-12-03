@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 5</title>
+</head>
+<body>
+
+   <script>
+    let array1= [1,2,3,4,5];
+    //let array2 = array1;
+    //array2.push(21);//agrego un elemento al final del array
+    //ESTO ES MODO CAVERNICOLA
+    //let array2 = [];
+    // array2.push(array1[0]);
+    // array2.push(array1[1]);
+    // array2.push(array1[2]);
+    // array2.push(array1[3]);
+    // array2.push(array1[4]);
+    // array.push(21);
+    //FORMA MEJOR:
+    // for (let i = 0; i < array1.length; i++) 
+    // {
+    //     array2.push(array1[i]);        
+    // }
+    // FOROFF:
+    // for (const elemento of array1) 
+    // {
+    //     // console.log(elemento);//esto devuelve los valores de este array1
+    //     array2.push(elemento);
+    // }
+    //USO UN FOREACH PARA PASAR UNA FUNCION...
+    // array1.forEach(function(elemento)
+    // {
+    //     array2.push(elemento);
+    // });
+
+    //SPREAD OPERATOR, EN SPANISH: OPERADOR DE PROPAGACION
+    //let array2 = [...array1];//los 3 puntos son el spread operator, me ahorro los for y etc   
+    let array2 = [2,1,4,8,9];
+
+    //QUE PASA SI HAGO ESTO:
+    //let array3 = [array1,array2];//es un array de un array, 2 elementos, que en cada elemento va a cargar un array
+    let array3 = [...array1, ...array2];//si hago spread operator, ahi si es un array con los elementos del array1 y array2
+
+    //array2.push(21);
+    console.log(array1);
+    console.log(array2);
+    console.log(array3);
+
+
+   </script>
+
+
+
+</body>
+</html>

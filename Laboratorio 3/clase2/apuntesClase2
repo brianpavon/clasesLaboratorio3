@@ -1,0 +1,45 @@
+Tablas... sirven para estructurar los datos que le pedimos al servidor...
+
+usa la etiqueta table
+
+Esta formada por filas, una arriba de la otra...
+la fila se llama tr-->table row... dentro de cada fila van las celdas... etiqueta td (table data)
+hoy en dia, hay 3 regiones... 
+(encabezado)thead-->encabezado de la tabla,tiene una TR, pero dentro tiene th, porque esta dentro de este encabezado
+(cuerpo)tbody-->cuerpo de la tabala
+(pie de pagina)al final de todo, va una que no siempre es necesaria, una TR especial... TFOOT(pie de tabla)
+
+colspan---> le digo el ancho que quiera que tenga
+rowspan--->para ajusta el alto de la fila a mas de una
+
+si uso la etiqueta link, y no hay archivo en la ruta especificada, dandole click le puedo dar crear el archivo
+
+
+Hacer el CSS en un archivo separado, sirve para poder usar en cualquier pagina...
+
+FORMULARIO:
+
+html5 trae mucha funcionalidad de botones y para formularios... por ej input
+propiedad "name" guarda el valor de esa variable para mandarlo a un servidor por ej
+para decirle al usuario lo que debe completar se puede hacer por placeholder o con un label
+
+para usar estos controles, usamos id, no es logico repetir los id, tienen que usarse distintos
+
+sino aclaro nada la info se manda por get, a traves de url, por post se mandan por el cuerpo...
+tenemos que tratar de no enviar las cosas por get, porque es mas inseguro
+
+con action, es adonde mandamos la info que se cargue en este formulario
+
+El evento load, se lanza,
+
+JAVASCRIPT.... manejador de un evento...
+pasarle por parametro una funcion se llama callback, es parecido al sort del linkedlist
+una funcion es un objeto para javascritp
+
+funcion anonima--> esta pensada para ser usada sin que invoque a otra funcion. Y es una funcion que se usa 
+en ese momento nomas...
+
+siempre que se lanza algun evento lanza un evento "e"
+
+Nunca vamos a mandar algo por un post o get a traves de php, para que nos dirija a otra pagina sino que hacemos
+que se cargue en otro lugar y continuar en la misma pagina
